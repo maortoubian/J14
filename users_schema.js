@@ -3,42 +3,38 @@ var schema = mongoose.Schema;
 
 var usersSchema = new schema({
 
-campName: {type:String, required:true},
-centerCoor: [{
-  latitude:{type:Number},
-  longitude:{type:Number}
-}],
-zoom: {type:String},
-users: [{
-	leadRank: {type:Number},
-  adminApproval: Boolean,
-  userId: {type:Number, required:true, unique:true},
-  userprofileImage: {type:String},
-  userFname: {type:String, required:true},
-  userLname: {type:String, required:true},
-  age: {type:Number},
-  rent11: {type:Number},
-  rent16: {type:Number},
-	status11: {type:String},
-  status16: {type:String},
-  occupation11: {type:String},
-  occupation16: {type:String},
-  salaryIncreased: {type:String},
-  happy: {type:Boolean},
-  whatIDid: {type:String},
-  protestSucceed: {type:Boolean},
-  regrets: {type:Boolean},
-  government: {type:Boolean},
-  socialPressure: {type:Boolean},
-  renewProtest: {type:Boolean},
-  tentImageLink: {type:String},
-  conclusion: {type:String},
-  tentCoor: [{
-    latitude:{type:Number},
-    longitude:{type:Number}
+  campName:{type:String, unique:true},
+  centerCoor: [{
+    latitude: String,
+    longitude: String
   }],
-
-}]
-}, {collection: 'camps'});
+  zoom: Number,
+  users: [{
+    userId:{type:String, unique:true},
+    leadRank: Number,
+    adminApproval: Boolean,
+    userFname: {type:String, required:true},
+    userLname: {type:String, required:true},
+    age: String,
+    rent11: String,
+    rent16: String,
+    status11: String,
+    status16: String,
+    city11: String,
+    city16: String,
+    happy: String,
+    protestSucceed: String,
+    government: String,
+    socialPressure: String,
+    renewProtest: String,
+    tentImageLink: String,
+    userprofileImage: String,
+    conclusion: String,
+    tentCoor: [{
+      latitude:String,
+      longitude:String
+    }]
+  }]
+}, {collection: 'campsnames'});
 
 exports.usersSchema = usersSchema;

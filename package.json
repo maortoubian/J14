@@ -1,17 +1,21 @@
 {
   "name": "webservice",
   "version": "1.0.0",
-  "description": "",
+  "description": "J14 ",
   "main": "index.js",
   "dependencies": {
     "express": "^4.13.3",
     "mongo": "^0.1.0",
-    "mongoose": "^4.3.3"
+    "mongoose": "^4.3.3",
+    "body-parser": "^1.14.2",
+    "cloudinary": "^1.3.0",
+    "cors": "^2.7.1",
+    "formidable": "^1.0.17"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "MAOR OHAD EIDAN",
   "license": "ISC"
 }
